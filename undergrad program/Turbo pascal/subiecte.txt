@@ -1,0 +1,18 @@
+INTREBAREA AICI O SCRII
+Raspunsu a
+Raspunsu b
+Raspunsu c
+Raspunsu d
+Raspunsu corect;
+aaaa doua intrebare este ?
+grea
+usoara
+foarte
+super
+super
+????aaaa doua intrebare este ?
+grea?
+usoar?a
+foarte? usoara
+super
+super

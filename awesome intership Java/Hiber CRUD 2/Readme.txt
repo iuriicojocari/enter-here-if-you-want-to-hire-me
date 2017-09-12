@@ -1,0 +1,1 @@
+This is a simple CRUD( shorthand for Create Read Write and update) made java hibernate
