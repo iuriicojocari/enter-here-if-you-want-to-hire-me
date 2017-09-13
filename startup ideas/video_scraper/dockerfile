@@ -23,7 +23,6 @@ WORKDIR ${src}
 #clone project from git and try to build it
 
 run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
-CMD ['cd',' CommercialDetection/']
-run ./dependencies.sh
-run echo "NOW YOU CAN BUILD AN APP for tracking ads statistics throughout whole world"
+run ./CommercialDetection/dependencies.sh
 
+run echo "Attemp to feed with data"
