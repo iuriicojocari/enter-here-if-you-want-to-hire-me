@@ -26,3 +26,4 @@ run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
 run ./CommercialDetection/dependencies.sh
 
 run echo "Attemp to feed with data"
+run echo "hasn't been implemented"
