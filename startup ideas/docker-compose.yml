@@ -11,6 +11,7 @@ services:
     volumes:
       - /srv/docker/postgresql:/var/lib/postgresql  
   video_scraper:
-    build: .
+    build: video_scraper
+    
   
   
