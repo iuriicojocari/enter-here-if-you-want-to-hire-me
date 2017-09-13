@@ -15,12 +15,13 @@ RUN apt-get install -y make
 RUN apt-get install -y python-pip
 RUN apt-get install -y python2.7
 RUN apt-get install -y python2.7-dev
+RUN apt-get install -y vim
 
-RUN apt-get install -y autoremove
-RUN apt-get install -y clean
-
-
+#run train
+ENV src /x
+WORKDIR ${src}
 #clone project from git and try to build it
+
 run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
 run cd CommercialDetection
 run ./dependencies.sh
