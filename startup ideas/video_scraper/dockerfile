@@ -23,6 +23,7 @@ WORKDIR ${src}
 #clone project from git and try to build it
 
 run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
+#run git clone https://github.com/Breakthrough/PySceneDetect.git
 run ./CommercialDetection/dependencies.sh
 
 run echo "Attemp to feed with data"
