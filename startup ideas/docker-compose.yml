@@ -1,29 +1,16 @@
-
-FROM python:2.7
-
-RUN echo "Warning python 2.7 will be deprecated, so you have to migrate it to 3.6"
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y
-RUN apt-get install -y build-essential
-RUN apt-get install -y gcc
-RUN apt-get install -y git
-RUN apt-get install -y dos2unix
-RUN apt-get install -y libpq-dev
-RUN apt-get install -y make
-
-RUN apt-get install -y python-pip
-RUN apt-get install -y python2.7
-RUN apt-get install -y python2.7-dev
-RUN apt-get install -y vim
-
-#run train
-ENV src /x
-WORKDIR ${src}
-#clone project from git and try to build it
-
-run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
-run cd CommercialDetection
-run ./dependencies.sh
-run echo "NOW YOU CAN BUILD AN APP for tracking ads statistics throughout whole world"
-
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=video_streaming
+    ports:
+      - "5432:5432"
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql  
+  video_scraper:
+    build: .
+  
+  
