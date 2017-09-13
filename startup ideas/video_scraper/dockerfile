@@ -17,13 +17,13 @@ RUN apt-get install -y python2.7
 RUN apt-get install -y python2.7-dev
 RUN apt-get install -y vim
 
-#run train
+RUN mkdir x
 ENV src /x
 WORKDIR ${src}
 #clone project from git and try to build it
 
 run git clone https://github.com/vasanthkalingeri/CommercialDetection.git
-run cd CommercialDetection
+CMD ['cd',' CommercialDetection/']
 run ./dependencies.sh
 run echo "NOW YOU CAN BUILD AN APP for tracking ads statistics throughout whole world"
 
